@@ -18,4 +18,9 @@ describe('Fuzzy', () => {
     expect(fuzzy.name).toEqual("Fuzzy");
     expect(fuzzy.foodLevel).toEqual(10);
   });
+
+  test('should have a food level of 7 after 3001 milliseconds', () => {
+    jest.advanceTimersByTime(3001);
+    expect(fuzzy.foodLevel).toEqual(5);
+  });
 }); 
