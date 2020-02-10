@@ -17,8 +17,8 @@ export class HungryBear2 {
     if (this.foodLevel > 0) {
       return false;
     } else {
-      console.log("You've been eaten, try again!");
-      return true;
+      // console.log("You've been eaten, try again!");
+      return false;
     }
   }
 

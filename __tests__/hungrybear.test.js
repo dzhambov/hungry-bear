@@ -70,4 +70,9 @@ describe('Wuzzy', () => {
     wuzzy.foodLevel = 0;
     expect(wuzzy.didYouGetEaten()).toEqual(true);
   });
+
+  test('should get very hungry if 7 seconds pass without feeding', () => {
+    jest.advanceTimersByTime(10001);
+    expect(wuzzy.didYouGetEaten()).toEqual(true);
+  });
 }); 
