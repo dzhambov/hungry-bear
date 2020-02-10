@@ -65,4 +65,9 @@ describe('Wuzzy', () => {
     jest.advanceTimersByTime(3001);
     expect(wuzzy.foodLevel).toEqual(4);
   });
+
+  test('should get very hungry if the food level drops below zero', () => {
+    wuzzy.foodLevel = 0;
+    expect(wuzzy.didYouGetEaten()).toEqual(true);
+  });
 }); 

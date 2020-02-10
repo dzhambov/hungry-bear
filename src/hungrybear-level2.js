@@ -13,14 +13,14 @@ export class HungryBear2 {
     }, 1000);
   }
 
-  // didYouGetEaten() {
-  //   if (this.foodLevel > 0) {
-  //     return false;
-  //   } else {
-  //     console.log("You've been eaten, try again!");
-  //     return true;
-  //   }
-  // }
+  didYouGetEaten() {
+    if (this.foodLevel > 0) {
+      return false;
+    } else {
+      console.log("You've been eaten, try again!");
+      return true;
+    }
+  }
 
   // feed() {
   //   this.foodLevel = 7;
