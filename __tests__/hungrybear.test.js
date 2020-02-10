@@ -29,4 +29,9 @@ describe('Fuzzy', () => {
     fuzzy.foodLevel = 0;
     expect(fuzzy.didYouGetEaten()).toEqual(true);
   });
+
+  test('should get very hungry if 10 seconds pass without feeding', () => {
+    jest.advanceTimersByTime(10001);
+    expect(fuzzy.didYouGetEaten()).toEqual(true);
+  });
 }); 
