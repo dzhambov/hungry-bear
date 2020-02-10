@@ -1,4 +1,6 @@
-export class HungryBear {
+import { returnStatement } from "@babel/types";
+
+export class HungryBear1 {
 
   constructor(name) {
     this.name = name;
@@ -15,6 +17,7 @@ export class HungryBear {
     if (this.foodLevel > 0) {
       return false;
     } else {
+      console.log("You've been eaten, try again!");
       return true;
     }
   }
