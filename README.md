@@ -21,7 +21,7 @@ you need to feed the bear regularly or the bear will try to eat you. Specificall
 |User must feed the bear must be fed every 7 seconds, is not user will be eaten|User feeds bear every 7 seconds|User is not eaten| |
 | |User does not feed bear every within 7 seconds|User is eaten|User is eaten|
 |Bear should have a name and a food level of 7 when it is created|NA|NA|
-|Bear should have a food level of 7 after 2001 milliseconds|NA|NA|
+|Bear should have a food level of 4 after 3001 milliseconds|NA|NA|
 
 ## Setup/Installation Requirements
 
