@@ -22,7 +22,7 @@ export class HungryBear2 {
     }
   }
 
-  // feed() {
-  //   this.foodLevel = 7;
-  // }
+  feed() {
+    this.foodLevel = 7;
+  }
 }

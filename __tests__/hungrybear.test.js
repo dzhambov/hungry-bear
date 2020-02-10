@@ -75,4 +75,10 @@ describe('Wuzzy', () => {
     jest.advanceTimersByTime(10001);
     expect(wuzzy.didYouGetEaten()).toEqual(true);
   });
+
+  test('should have a food level of seven if it is fed', () => {
+    jest.advanceTimersByTime(9001);
+    wuzzy.feed();
+    expect(wuzzy.foodLevel).toEqual(4);
+  });
 }); 
