@@ -18,7 +18,7 @@ export class HungryBear2 {
       return false;
     } else {
       // console.log("You've been eaten, try again!");
-      return false;
+      return true;
     }
   }
 
