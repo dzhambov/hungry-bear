@@ -50,6 +50,7 @@ describe('Wuzzy', () => {
   beforeEach(function() {
     wuzzy = new HungryBear2("Wuzzy");
     wuzzy.setHunger();
+    wuzzy.setMood();
   });
 
   afterEach(function() {
@@ -80,5 +81,14 @@ describe('Wuzzy', () => {
     jest.advanceTimersByTime(9001);
     wuzzy.feed();
     expect(wuzzy.foodLevel).toEqual(7);
+  });
+
+  test('should have a mood level of 0 when it is created', () => {
+    expect(wuzzy.moodLevel).toEqual(0);
+  });
+
+  test('should have a mood level of 3 after 3001 milliseconds', () => {
+    jest.advanceTimersByTime(3001);
+    expect(wuzzy.moodLevel).toEqual(3);
   });
 }); 
