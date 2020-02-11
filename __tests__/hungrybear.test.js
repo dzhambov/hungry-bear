@@ -10,6 +10,7 @@ describe('Fuzzy', () => {
   beforeEach(function() {
     fuzzy = new HungryBear1("Fuzzy");
     fuzzy.setHunger();
+    fuzzy.setMood();
   });
 
   afterEach(function() {
@@ -26,12 +27,13 @@ describe('Fuzzy', () => {
     expect(fuzzy.foodLevel).toEqual(7);
   });
 
-  test('should get very hungry if the food level drops below zero', () => {
+  test('should get very hungry and angry if the food level and mood level drops below zero. ', () => {
     fuzzy.foodLevel = 0;
+    fuzzy.moodLevel = 0;
     expect(fuzzy.didYouGetEaten()).toEqual(true);
   });
 
-  test('should get very hungry if 10 seconds pass without feeding', () => {
+  test('should get very hungry and angry if 10 seconds pass without feeding', () => {
     jest.advanceTimersByTime(10001);
     expect(fuzzy.didYouGetEaten()).toEqual(true);
   });
@@ -41,7 +43,17 @@ describe('Fuzzy', () => {
     fuzzy.feed();
     expect(fuzzy.foodLevel).toEqual(10);
   });
+
+  test('should have a mood level of 10 when it is created', () => {
+    expect(fuzzy.moodLevel).toEqual(10);
+  });
+
+  test('should have a mood level of 7 after 3001 milliseconds', () => {
+    jest.advanceTimersByTime(3001);
+    expect(fuzzy.moodLevel).toEqual(7);
+  });
 }); 
+
 
 describe('Wuzzy', () => {
   jest.useFakeTimers();
@@ -67,12 +79,13 @@ describe('Wuzzy', () => {
     expect(wuzzy.foodLevel).toEqual(4);
   });
 
-  test('should get very hungry if the food level drops below zero', () => {
+  test('should get very hungry and happy if the food level drops below zero, and mood level goes above 7', () => {
     wuzzy.foodLevel = 0;
+    wuzzy.moodLevel = 7;
     expect(wuzzy.didYouGetEaten()).toEqual(true);
   });
 
-  test('should get very hungry if 7 seconds pass without feeding', () => {
+  test('should get very hungry and happy if 7 seconds pass without feeding', () => {
     jest.advanceTimersByTime(10001);
     expect(wuzzy.didYouGetEaten()).toEqual(true);
   });

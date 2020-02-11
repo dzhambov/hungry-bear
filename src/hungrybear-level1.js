@@ -5,6 +5,7 @@ export class HungryBear1 {
   constructor(name) {
     this.name = name;
     this.foodLevel = 10;
+    this.moodLevel = 10;
   }
 
   setHunger() {
@@ -13,8 +14,14 @@ export class HungryBear1 {
     }, 1000);
   }
 
+  setMood() {
+    setInterval(() => {
+      this.moodLevel--;
+    }, 1000);
+  }
+
   didYouGetEaten() {
-    if (this.foodLevel > 0) {
+    if (this.foodLevel > 0 && this.moodLevel > 0) {
       return false;
     } else {
       return true;
@@ -23,5 +30,6 @@ export class HungryBear1 {
 
   feed() {
     this.foodLevel = 10;
+    this.moodLevel = 10;
   }
 }
