@@ -1,0 +1,30 @@
+#main {
+display: none;
+}
+
+body {
+  background-image: url("https://thebulletin.org/wp-content/uploads/2019/07/Forest-1024x665.jpg");
+  background-repeat: no-repeat;
+}
+ 
+#dead {
+  display: none;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+#ben {
+  margin-top: 300px;
+  height: 50%;
+  width: 50%;
+}
+
+#icecream {
+  margin-top: 30px;
+  height: 30%;
+  width: 30%;
+}

@@ -1,23 +1,21 @@
-import { returnStatement } from "@babel/types";
-
 export class HungryBear1 {
 
-  constructor(name) {
+  constructor() {
     this.name = name;
-    this.foodLevel = 10;
-    this.moodLevel = 10;
+    this.foodLevel = 100;
+    this.moodLevel = 100;
   }
 
   setHunger() {
     setInterval(() => {
       this.foodLevel--;
-    }, 1000);
+    }, 100);
   }
 
   setMood() {
     setInterval(() => {
       this.moodLevel--;
-    }, 1000);
+    }, 100);
   }
 
   didYouGetEaten() {
@@ -28,8 +26,13 @@ export class HungryBear1 {
     }
   }
 
+  start() {
+    this.foodLevel = 100;
+    this.moodLevel = 100;
+  }
+
   feed() {
-    this.foodLevel = 10;
-    this.moodLevel = 10;
+    this.foodLevel += 10;
+    this.moodLevel += 10;
   }
 }

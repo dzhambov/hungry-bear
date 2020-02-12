@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Hungry Bear</title>
-</head>
-<body>
-  <div class="container">
-    <h1>Feed the bear</h1>
-    <button class="btn-warning" id="submitFeed">Feed</button>
-    <div id="displayFeed"></div>
-  </div>
-</body>
+  <head>
+    <title>Hungry Bear</title>
+  </head>
+  <body>
+    <div class="container" id="intro">
+      <div>
+        <h1>Name the hungry bear:</h1>
+        <input type="text" id="bearname">
+        <button type="button" id="startGame" class="btn-success">Start</button>
+      </div>
+      <img id="ben" src="https://media.giphy.com/media/RfXmmUJf9G26Za3dLB/giphy.gif" alt="Say Hi to your new friend!">
+    </div>
+
+    <div class="container">
+      <div class="well">
+        <div id="main">
+          <h2>Feed<span id="displayname"></span>!</h2>
+
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Hunger</h3>
+              <span id="hunger-level"></span>
+              <div class="progress">
+                <div id="hunger-bar" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width:100%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3>Mood</h3>
+              <span id="mood-level"></span>
+              <div class="progress">
+                <div id="mood-bar" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width:100%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="10"></div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <button type="button" id="hungry" class="btn btn-warning">Feed</button> 
+          <br>
+          <img src="https://media.giphy.com/media/620aTM1HEg4shjTgFP/giphy.gif" alt="Feed your new friend!" id="iceream">
+        </div>
+        <div id="dead">
+          <h2>You've been eaten by<span id="bearname"></span></h2>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
